@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Returdata Analyse - POC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .anbefalinger {
+      margin-top: 20px;
+    }
+    .anbefalinger h3 {
+      margin-bottom: 10px;
+    }
+    .button {
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+  <!-- JavaScript-dokumentet kaldes her for at kunne bruges i HTML-dokumentet-->
+  <script type = "text/javascript" src="java.js"></script>
+
+</head>
+<body>
+
+  <h1>Analyse af Returdata</h1>
+
+  <h2>Returdata</h2>
+  <table id="returdata-tabel">
+    <thead>
+      <tr>
+        <th>Produktnavn</th>
+        <th>Størrelse</th>
+        <th>Returneringsårsag</th>
+        <th>Antal Returneringer</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="anbefalinger">
+    <h3>Størrelsesanbefalinger</h3>
+    <ul id="anbefalinger-liste"></ul>
+  </div>
+
+  <button class="button" onclick="opdaterShopify()">Opdater Produktbeskrivelser</button>
+
+</body>
+</html>
